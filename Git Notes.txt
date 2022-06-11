@@ -1,9 +1,13 @@
 https://www.freecodecamp.org/news/what-is-git-learn-git-version-control/
+https://www.youtube.com/watch?v=RGOj5yH7evk&t=715s
 
 
 BASICS
-Git: Version Control System that is used to save and t=store snapshots/versions of our project in local/remote repositories
-GitHub,GitLab, etc: They are hosting services that are used to store and share out local repositories for collaboration with other developers
+
+Git: Version Control System that is used to save and t=store snapshots/versions of our project in local/remote repositories
+
+GitHub,GitLab, etc: They are hosting services that are used to store and share out local repositories for collaboration with other developers
+
 .git: It is Git repository which tracks all the changes that are made to the project folder
       The .git repo in our computer is the local repo
       The repo in cloud/hosting service is the remote repo
@@ -11,6 +15,14 @@ GitHub,GitLab, etc: They are hosting services that are used to store and share o
 Git commit: It is the standalone version of our project which has a reference to all the files nd folders that are part of that version.
 
 Git Sign: It consists of Commit Hash, Author, Date and Description of the commit
+
+Commit Hash: It is hash which uses SHA-1 hashing algorithm consisting of 40 characters long string.
+
+
+Git Spaces
+1. Working Directory: Project folder where all our files resides
+2. Staging area: Part of our repo. Rough draft space where we add updated version of our files or remove files in order to choose what we plan to include in our next commit. In .git, the staging area is file called "index"
+3. Commit history: Part of our repo. This is where all our commits live after they have been made. In .git, the commit history is folder called "objects". Each commit points to the parent commit which is the commit that came vefore it.
 
 
 Using Git Locally (Windows)
@@ -35,24 +47,28 @@ Using Git Remotely and Locally (in project folder cmd/GUI bash)
    Step 2: git push (from now on, just git push is enough)
 
 
-Git Spaces
-1. Working Directory: Project folder where all our files resides
-2. Staging area: Part of our repo. Rough draft space where we add updated version of our files or remove files in order to choose what we plan to include in our next commit. In .git, the staging area is file called "index"
-3. Commit history: Part of our repo. This is where all our commits live after they have been made. In .git, the commit history is folder called "objects". Each commit points to the parent commit which is the commit that came vefore it.
-
-
-Commit Hash
-- It is hash which uses SHA-1 hashing algorithm consisting of 40 characters long string.
-- 
-
-
 Branch in Git
 - It is the pointer to a commit
 - The default branch is called main/master branch.
 - master points to the most recent commit
 - To find the hash of the commit (most recent commit) the master branch is pointing to:
   .git -> ref -> heads -> master -> Open to find hash
-- To see list of all branches: git branch
+- The feature branch is the branch used for developers to make changes and file a pull request so that their changes are added in main branch
+
+
+Using branches (commands in project folder -> GUI bash/cmd)
+1. To see list of all branches: git branch
+2. To create new branch: git branch branchname
+3. To switch to a different branch: git checkout branchname
+4. Then you can edit files in feature branch remotely or locally in vscode
+5. To check differences in main and feature branch: git diff
+6. After making changes, save, commit and push/pull to synchronize remotely and locally
+7. In GitHub, make a pull request so that the author can check the request
+8. Then the author can verify and merge the feature branch onto main branch
+9. After merging, changes will be reflected in main branch
+10. This can be pushed/pulled to synchronize remotely and locally
+11. To delete a feature branch: git branch -d branchname
+12. To merge feature branch onto main (be in main branch): git merge branchname
 
 
 Commit steps
@@ -75,17 +91,26 @@ Commands
    git restore filename.extension
 6. To commit: git commit -m "message" -m "Description which is optional"
 7. To check commit history: git log
-8. To see list of all branches: git branch
-9. To edit the last commit: git commit --amend
-10. Link Git to a Github Account: git config --global user.username
-11. Link the remote and local repo: git remote add origin <link>
+8. To edit the last commit: git commit --amend
+9. Link Git to a Github Account: git config --global user.username
+10. Link the remote and local repo: git remote add origin <link>
    link is from the GitHub repo
-12. Push local file onto remote repo: git push origin main
-13. Pull remote file/changes onto local fle: git pull origin main
-14. Check username, email and other details: git config --list
-15. Check remote repo connected to local file: git remote -v
-16. In order to use git push instead of git push origin main: 
+11. Push local file onto remote repo: git push origin main
+12. Pull remote file/changes onto local fle: git pull origin main
+13. Check username, email and other details: git config --list
+14. Check remote repo connected to local file: git remote -v
+15. In order to use git push instead of git push origin main: 
     Step 1: git push -u origin main
     Step 2: git push (from now on, just git push is enough)
-17. 
-
+16. To see list of all branches: git branch
+17. To create new branch: git branch branchname
+18. To switch to a different branch: git checkout branchname
+19. To check differences in main and feature branch: git diff branchname
+20. To check all differences: gif diff
+21. To delete a feature branch: git branch -d branchname
+22. To merge feature branch onto main (be in main branch): git merge branchname
+23. To set user name: git config –global user.name “[name]”  
+24. To set email address: git config –global user.email “[email address]”
+25. To set repository-specific username/email configuration: 
+    same as 23,24 but without -global
+26. To stage and commit (only for edited files): git commit -am "message"
