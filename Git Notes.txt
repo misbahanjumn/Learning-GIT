@@ -13,13 +13,22 @@ Git commit: It is the standalone version of our project which has a reference to
 Git Sign: It consists of Commit Hash, Author, Date and Description of the commit
 
 
-Using Git (Windows):
+Using Git Locally (Windows)
 1. Download Git from the website
 2. Go to your project folder -> Right Click -> Get GUI Bash here or get GUI here
 3. In Bash, type command: git init
 4. A hidden folder is created in our project folder: .git (git repo)
 5. To see hidden folder: Go to control panel -> Appearance and Personaliztion -> File explorer -> Enable hidden files. Now you can see .git folder in your project folder
 6. To check Git version in computer: Go to Terminal -> git --version
+
+
+Using Git Remotely and Locally (in project folder cmd/GUI bash)
+1. Link Git to a Github Account: git config --global user.username
+2. In GitHub: New repository -> Name -> Create Repo
+3. Link the remote and local repo: git remote add origin <link>
+   link is from the GitHub repo
+4. Push local file onto remote repo: git push origin main
+5. Pull remote file/changes onto local fle: git pull origin main
 
 
 Git Spaces
@@ -60,7 +69,14 @@ Commands
    git rm filename.extension
 5. To restore file (which is present in previous commit but not in working directory): 
    git restore filename.extension
-6. To commit: git commit -m "message"
+6. To commit: git commit -m "message" -m "Description which is optional"
 7. To check commit history: git log
 8. To see list of all branches: git branch
 9. To edit the last commit: git commit --amend
+10. Link Git to a Github Account: git config --global user.username
+11. Link the remote and local repo: git remote add origin <link>
+   link is from the GitHub repo
+12. Push local file onto remote repo: git push origin main
+13. Pull remote file/changes onto local fle: git pull origin main
+14. Check username, email and other details: git config --list
+15. 
