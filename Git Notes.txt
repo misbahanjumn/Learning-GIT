@@ -14,6 +14,10 @@ GitHub,GitLab, etc: They are hosting services that are used to store and share o
 
 Git commit: It is the standalone version of our project which has a reference to all the files nd folders that are part of that version.
 
+Git Clone: It creates a linked local copy of the entire repository that will continue to synchronize with the target repository. Need author's permission to perform pull onto the original repository
+
+Git Fork: It creates an independent copy of the entire repository to which a person has full access to. Does not need author's permission to perform any action such as merge pull push.
+
 Git Sign: It consists of Commit Hash, Author, Date and Description of the commit
 
 Commit Hash: It is hash which uses SHA-1 hashing algorithm consisting of 40 characters long string.
@@ -114,3 +118,7 @@ Commands
 25. To set repository-specific username/email configuration: 
     same as 23,24 but without -global
 26. To stage and commit (only for edited files): git commit -am "message"
+27. Undo staging: git reset filename.txt
+28. Undo commit (point to last commit not 0): git reset HEAD~1
+29. Hard Undo commit (remove from changes file too): git reset --hard HEAD~1 
+30. To clone: git clone <link>
