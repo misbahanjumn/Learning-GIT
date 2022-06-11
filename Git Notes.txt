@@ -1,0 +1,66 @@
+https://www.freecodecamp.org/news/what-is-git-learn-git-version-control/
+
+
+BASICS
+Git: Version Control System that is used to save and t=store snapshots/versions of our project in local/remote repositories
+GitHub,GitLab, etc: They are hosting services that are used to store and share out local repositories for collaboration with other developers
+.git: It is Git repository which tracks all the changes that are made to the project folder
+      The .git repo in our computer is the local repo
+      The repo in cloud/hosting service is the remote repo
+
+Git commit: It is the standalone version of our project which has a reference to all the files nd folders that are part of that version.
+
+Git Sign: It consists of Commit Hash, Author, Date and Description of the commit
+
+
+Using Git (Windows):
+1. Download Git from the website
+2. Go to your project folder -> Right Click -> Get GUI Bash here or get GUI here
+3. In Bash, type command: git init
+4. A hidden folder is created in our project folder: .git (git repo)
+5. To see hidden folder: Go to control panel -> Appearance and Personaliztion -> File explorer -> Enable hidden files. Now you can see .git folder in your project folder
+6. To check Git version in computer: Go to Terminal -> git --version
+
+
+Git Spaces
+1. Working Directory: Project folder where all our files resides
+2. Staging area: Part of our repo. Rough draft space where we add updated version of our files or remove files in order to choose what we plan to include in our next commit. In .git, the staging area is file called "index"
+3. Commit history: Part of our repo. This is where all our commits live after they have been made. In .git, the commit history is folder called "objects". Each commit points to the parent commit which is the commit that came vefore it.
+
+
+Commit Hash
+- It is hash which uses SHA-1 hashing algorithm consisting of 40 characters long string.
+- 
+
+
+Branch in Git
+- It is the pointer to a commit
+- The default branch is called main/master branch.
+- master points to the most recent commit
+- To find the hash of the commit (most recent commit) the master branch is pointing to:
+  .git -> ref -> heads -> master -> Open to find hash
+- To see list of all branches: git branch
+
+
+Commit steps
+1. Edit files (Ex. Create a new file in project folder)
+2. Open GUI Bash and type: git status (To check staging area)
+3. To add file to staging area: git add filename.extension
+   The files are copied from the working directory to the staging are and not moved
+4. Check status: git status
+5. To commit: git commit -m "message"
+6. To check commit history: git log
+
+
+Commands
+1. To check Git version in computer: Go to Terminal -> git --version
+2. To check status: git status (in GUI Bash)
+3. To add file to staging area: git add filename.extension / git add 'file name.extension'
+4. To delete file (which is present in previous commit but not in working directory): 
+   git rm filename.extension
+5. To restore file (which is present in previous commit but not in working directory): 
+   git restore filename.extension
+6. To commit: git commit -m "message"
+7. To check commit history: git log
+8. To see list of all branches: git branch
+9. To edit the last commit: git commit --amend
