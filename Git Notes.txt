@@ -122,3 +122,29 @@ Commands
 28. Undo commit (point to last commit not 0): git reset HEAD~1
 29. Hard Undo commit (remove from changes file too): git reset --hard HEAD~1 
 30. To clone: git clone <link>
+31. To format patch: git format-patch -1 <email kernel patch to repo>
+32. To link upstream: git remote add upstream main_link
+33. To check fetch and push repos: git remote -v
+34. Commit with config file: git commit -s
+
+IBM GIT Basics
+Add username: git config –global user.name “Misbah Anjum N”
+Add email: git –config –global user.email misbahanjumn@ibm.com
+To check details: git config –list (or) cat ~/.gitconfig
+To format patch: git format-patch -1 <email kernel patch to repo>
+To link upstream: git remote add upstream main_link
+
+Steps
+1. Fork main repo into your own github account
+2. Clone that forked repo locally
+3. Use Link upstream command (32)
+4. To check fetch and push links use command 33
+5. Now select branch where file is present and make new changes to which ever file needed
+6. Add file to the staging area
+7. Commit the changes using config file (34)
+8. In config file: give heading, changes description and in the end, mandatory, "Signed-off-by: Misbah Anjum N <misbahanjumn@ibm.com>"
+9. To quit config file: :wq
+10. Create a patch file using command 31 (Can view using ls)
+11. Now push the changes to the fork
+12. Create a pull request using the link given in the description
+
