@@ -146,5 +146,5 @@ Steps
 9. To quit config file: :wq
 10. Create a patch file using command 31 (Can view using ls)
 11. Now push the changes to the fork
-12. Create a pull request using the link given in the description
+12. Create a pull request using the link generated from the above step
 
